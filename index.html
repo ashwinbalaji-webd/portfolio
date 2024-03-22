@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Airline Disruption Management Tool</title>
+    <link rel="stylesheet" href="./src/scss/main.scss" />
+    <link rel="stylesheet" href="./src/assets/fonts/RobotoMono.css"/>
+  </head>
+  <body>
+    <div id="container">
+      <div id="sidebar">
+        <button onclick="toggleSideBar()">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="25"
+            height="25"
+            viewBox="0 0 1216 1312"
+          >
+            <path
+              d="M1202 1066q0 40-28 68l-136 136q-28 28-68 28t-68-28L608 976l-294 294q-28 28-68 28t-68-28L42 1134q-28-28-28-68t28-68l294-294L42 410q-28-28-28-68t28-68l136-136q28-28 68-28t68 28l294 294l294-294q28-28 68-28t68 28l136 136q28 28 28 68t-28 68L880 704l294 294q28 28 28 68z"
+            />
+          </svg>
+        </button>
+        <ul id="side-navs">
+          <li><a href="#hero" onclick="toggleSideBar()">Home</a></li>
+          <li><a href="#services" onclick="toggleSideBar()">About</a></li>
+          <li><a href="#skills" onclick="toggleSideBar()">Skills</a></li>
+          <li><a href="#contact" onclick="toggleSideBar()">Contact</a></li>
+        </ul>
+        <div class="cls-contact">
+          <h4>Contact Information</h4>
+          <div>
+            <p>Chennai,</p>
+            <p>Tamil Nadu - 600094, India</p>
+          </div>
+        </div>
+        <div class="cls-connect">
+          <h4>Connect with me</h4>
+          <div>
+            <p>hello.ashwinbalaji@gmail.com</p>
+            <p>+91 9487015566</p>
+          </div>
+        </div>
+      </div>
+      <section id="hero">
+        <nav>
+          <a href="mailto:hello.ashwinbalaji@gmail.com" class="cls-mail"
+            >hello.ashwinbalaji@gmail.com</a
+          >
+          <button class="cls-push-button" onclick="toggleSideBar()">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="30"
+              height="30"
+              viewBox="0 0 24 24"
+            >
+              <path
+                fill="currentColor"
+                fill-rule="evenodd"
+                d="M3 6.75A.75.75 0 0 1 3.75 6h16.5a.75.75 0 0 1 0 1.5H3.75A.75.75 0 0 1 3 6.75ZM3 12a.75.75 0 0 1 .75-.75h16.5a.75.75 0 0 1 0 1.5H3.75A.75.75 0 0 1 3 12Zm0 5.25a.75.75 0 0 1 .75-.75H12a.75.75 0 0 1 0 1.5H3.75a.75.75 0 0 1-.75-.75Z"
+                clip-rule="evenodd"
+              />
+            </svg>
+          </button>
+        </nav>
+
+        <div class="cls-hero-text-container">
+          <h1 class="cls-hero-title cls-hero-title-1">Ashwin</h1>
+          <div>
+            <h1 class="cls-hero-title cls-hero-title-2">Balaji</h1>
+            <p class="cls-hero-description">
+              A creative developer based in Chennai. Crafts memorable digital
+              <b>identities and experiences</b>.
+            </p>
+          </div>
+          <div>Web Developer</div>
+        </div>
+        <div class="cls-hero-img-container">
+          <img src="./src/assets/images/hero.png" />
+          <div class="cls-greetings-container">
+            <h4>Hello world!</h4>
+          </div>
+        </div>
+      </section>
+      <section id="services" class="cls-box cls-aos-Y">
+        <header>
+          <div class="cls-heading">about ashwin balaji</div>
+          <div class="cls-page-number">01</div>
+        </header>
+        <div>
+          <div class="cls-about-box-1">
+            <h1>
+              Innovative Web Developer Crafting Seamless Digital Experiences
+            </h1>
+            <p>
+              Leveraging expertise in React for frontend development and Django
+              framework for backend API creation, I specialize in building
+              dynamic and responsive web solutions that elevate user
+              experiences.
+            </p>
+          </div>
+          <div class="cls-about-box-2">
+            <div class="cls-about-subbox">
+              <h4>Solutions</h4>
+              <div>
+                Harnessing the power of React, I craft visually stunning and
+                highly interactive user interfaces that captivate audiences and
+                drive engagement.
+              </div>
+            </div>
+            <div class="cls-about-subbox">
+              <h4>Backend</h4>
+              <div>
+                With Django as the backbone of my projects, I ensure secure and
+                scalable backend API development, paving the way for seamless
+                integration and efficient data management.
+              </div>
+            </div>
+            <div class="cls-about-subbox">
+              <h4>Collaboration</h4>
+              <div>
+                I thrive in collaborative environments, working closely with
+                designers and stakeholders to translate concepts into
+                functional, intuitive web applications that exceed expectations.
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="cls-personal-details">
+          <div>
+            <h4>Expertise</h4>
+            <p>Web development</p>
+          </div>
+          <div>
+            <h4>Born in</h4>
+            <p>Tamil Nadu, India</p>
+          </div>
+          <div>
+            <h4>Date of birth</h4>
+            <p>22 December 1999</p>
+          </div>
+          <div>
+            <h4>Education</h4>
+            <p>Pursuing Master of Computer Applications</p>
+          </div>
+        </div>
+      </section>
+      <!-- <section id="about" class="cls-box">
+        <header>
+          <div class="cls-heading">Latest works</div>
+          <div class="cls-page-number">02</div>
+        </header>
+      </section> -->
+      <div class="cls-marquee-container cls-aos-Y">
+        <div class="cls-marquee-content">
+          <p class="cls-marquee top">
+            HTML. CSS. Javascript. Typescript. React. Redux. Python. Django.
+            Parcel. Webpack. Postman. Agile methodology. Jenkins. SVN. GIT.
+          </p>
+          <p class="cls-marquee top">
+            HTML. CSS. Javascript. Typescript. React. Redux. Python. Django.
+            Parcel. Webpack. Postman. Agile methodology. Jenkins. SVN. GIT.
+          </p>
+        </div>
+        <div class="cls-marquee-content">
+          <p class="cls-marquee bottom">
+            HTML. CSS. Javascript. Typescript. React. Redux. Python. Django.
+            Parcel. Webpack. Postman. Agile methodology. Jenkins. SVN. GIT.
+          </p>
+          <p class="cls-marquee bottom">
+            HTML. CSS. Javascript. Typescript. React. Redux. Python. Django.
+            Parcel. Webpack. Postman. Agile methodology. Jenkins. SVN. GIT.
+          </p>
+        </div>
+      </div>
+
+      <section id="portfolio" class="cls-box cls-aos-Y"></section>
+      <section id="blog" class="cls-aos-Y"></section>
+      <section id="skills" class="cls-box cls-aos-Y">
+        <header>
+          <div class="cls-heading">skills</div>
+          <div class="cls-page-number">02</div>
+        </header>
+
+        <h1>
+          Crafting indelible digital experiences through innovative web
+          development solutions
+        </h1>
+        <p>
+          I leverage my expertise in React for frontend design and Django
+          framework for backend API development. As the Software Engineer at
+          Infiniti Software Solutions, I am dedicated to enhancing user
+          experiences and interface development.
+        </p>
+
+        <ul class="cls-skills-container cls-aos-X">
+          <li>
+            <span>2019</span>
+            <p><b>2019</b>Honors Diploma in Computer Applications</p>
+          </li>
+          <li>
+            <span>2022</span>
+            <p>
+              <b>2019 - 2022</b>Bachelor of Science in Information Technology
+            </p>
+          </li>
+          <li>
+            <span>2023</span>
+            <p><b>2023 - 2025</b>Master of Computer Applications</p>
+          </li>
+        </ul>
+
+        <div class="cls-progress-container" id="progress">
+          <div>
+            <h5>HTML, CSS, JS, React</h5>
+            <div class="cls-progress cls-p-1" data-progress="85"></div>
+          </div>
+          <div>
+            <h5>Django Rest Framework</h5>
+            <div class="cls-progress cls-p-2" data-progress="75"></div>
+          </div>
+          <div>
+            <h5>API Testing</h5>
+            <div class="cls-progress cls-p-3" data-progress="89"></div>
+          </div>
+          <div>
+            <h5>Communication</h5>
+            <div class="cls-progress cls-p-4" data-progress="75"></div>
+          </div>
+          <div>
+            <h5>Debugging</h5>
+            <div class="cls-progress cls-p-5" data-progress="90"></div>
+          </div>
+          <div>
+            <h5>Version Control tools</h5>
+            <div class="cls-progress cls-p-5" data-progress="65"></div>
+          </div>
+        </div>
+      </section>
+      <!-- <section id="contact" class="cls-aos-Y-X"></section> -->
+      <footer class="cls-aos-Y cls-box">
+        <div class="cls-contact">
+          <div>Weave something great.</div>
+          <div>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="50"
+              height="50"
+              viewBox="0 0 24 24"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M23 20V6l-11 9L1 6v14h22Zm-11-8l10-8H2l10 8Z"
+              />
+            </svg>
+
+            <div class="cls-aos-X">
+              <a href="mailto:hello.ashwinbalaji@gmail.com"
+                >hello.ashwinbalaji@infinitisoftware.net</a
+              >
+            </div>
+          </div>
+        </div>
+        <div class="cls-social-links">
+          <div>Let's work together</div>
+          <div>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              viewBox="0 0 14 14"
+            >
+              <path
+                fill="currentColor"
+                fill-rule="evenodd"
+                d="M2.913 2.362c.26-.268.403-.626.4-.998A1.417 1.417 0 0 0 1.928 0A1.428 1.428 0 0 0 .532 1.364a1.449 1.449 0 0 0 1.396 1.428a1.42 1.42 0 0 0 .985-.43M1.67 4.63c-.587-.013-.987-.022-.987.696v7.992c0 .703.382.689.932.668c.1-.004.205-.008.314-.008c.11 0 .215.004.314.008c.548.02.922.035.922-.668V5.327c0-.718-.392-.71-.976-.696a11.321 11.321 0 0 1-.519 0Zm4.084.015c-.266.053-.437.223-.437.681v7.992c0 .703.367.689.918.668c.1-.004.207-.008.318-.008c.112 0 .218.004.319.008c.554.02.928.035.928-.668V9.056a1.545 1.545 0 0 1 1.577-1.695a1.534 1.534 0 0 1 1.62 1.663v4.261c0 .704.366.69.917.669c.1-.004.207-.008.318-.008c.112 0 .218.004.319.008c.551.02.917.035.917-.668V7.83a3.195 3.195 0 0 0-3.388-3.335a2.674 2.674 0 0 0-2.387 1.066c.011-.394-.117-.916-.436-.916c-.092 0-.233-.005-.393-.01c-.4-.012-.92-.028-1.11.01"
+                clip-rule="evenodd"
+              />
+            </svg>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script src="./src/js/main.js"></script>
+  </body>
+</html>
