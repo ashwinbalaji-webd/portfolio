@@ -360,6 +360,7 @@ header {
   font-size: 1.4rem;
 }
 #container .cls-marquee-container {
+  overflow: hidden;
   margin-block-start: 8rem;
   display: flex;
   flex-direction: column;
