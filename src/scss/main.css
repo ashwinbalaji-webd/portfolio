@@ -229,7 +229,7 @@ header {
   margin-inline-start: clamp(0rem, 18vw, 10rem);
 }
 #container #hero .cls-hero-text-container .cls-hero-title {
-  font-size: clamp(4rem, 10vw, 13rem);
+  font-size: clamp(5.4rem, 10vw, 13rem);
   font-weight: 700;
 }
 #container #hero .cls-hero-text-container .cls-hero-title-1 {
@@ -241,14 +241,14 @@ header {
   color: #fff;
 }
 #container #hero .cls-hero-text-container .cls-hero-description {
-  font-size: clamp(1.2rem, 3vw, 1.9rem);
+  font-size: clamp(2rem, 3vw, 1.9rem);
   line-height: 1.5;
   max-width: 40rem;
   font-weight: 500;
 }
 #container #hero .cls-hero-text-container > :last-child {
   margin: 0;
-  font-size: clamp(3rem, 6vw, 11rem);
+  font-size: clamp(4.2rem, 6vw, 11rem);
   font-weight: 900;
   border-radius: 12px;
   color: #FFF78A;
@@ -580,7 +580,6 @@ header {
   }
   #container #hero .cls-hero-text-container > :last-child {
     line-height: 1;
-    font-size: 18px;
   }
   #container #hero .cls-hero-text-container .cls-hero-description {
     color: #fff;

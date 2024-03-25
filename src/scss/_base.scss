@@ -13,7 +13,6 @@ html {
 }
 
 body {
-  // width: 100vw;
   overflow-x: hidden;
   font-size: 1.7rem;
   line-height: 3rem;
@@ -241,10 +240,10 @@ header {
       }
 
       .cls-hero-title {
-        font-size: clamp(4rem, 10vw, 13rem);
+        font-size: clamp(5.4rem, 10vw, 13rem);
         font-weight: 700;
       }
-
+ 
       .cls-hero-title-1 {
         -webkit-text-fill-color: transparent;
         -webkit-text-stroke-color: $white;
@@ -256,8 +255,7 @@ header {
       }
 
       .cls-hero-description {
-        // font-size: 1.9rem;
-        font-size: clamp(1.2rem, 3vw, 1.9rem);
+        font-size: clamp(2rem, 3vw, 1.9rem);
         line-height: 1.5;
         max-width: 40rem;
         font-weight: 500;
@@ -265,7 +263,7 @@ header {
 
       & > :last-child {
         margin: 0;
-        font-size: clamp(3rem, 6vw, 11rem);
+        font-size: clamp(4.2rem, 6vw, 11rem);
         font-weight: 900;
         border-radius: 12px;
         color: $secondary-color;
