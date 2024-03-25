@@ -161,6 +161,14 @@
         }
       }
     }
+
+    .cls-marquee-container {
+      .cls-marquee-hover-content {
+        ul {
+          grid-template-columns: 1fr 1fr;
+        }
+      }
+    }
   }
 }
 /* Small devices (portrait tablets and large phones, 600px and up) */

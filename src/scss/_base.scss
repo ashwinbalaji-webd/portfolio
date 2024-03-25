@@ -243,7 +243,7 @@ header {
         font-size: clamp(5.4rem, 10vw, 13rem);
         font-weight: 700;
       }
- 
+
       .cls-hero-title-1 {
         -webkit-text-fill-color: transparent;
         -webkit-text-stroke-color: $white;
@@ -350,7 +350,6 @@ header {
   /**************************/
 
   #services {
-
     & > div {
       display: grid;
       grid-template-columns: 1.5fr 3fr;
@@ -407,13 +406,46 @@ header {
   /**************************/
 
   .cls-marquee-container {
-  
-    overflow: hidden;
+    // overflow: hidden;
     margin-block-start: 8rem;
     display: flex;
     flex-direction: column;
     gap: 2rem;
+    position: relative;
     
+    .cls-marquee-hover-content {
+      opacity: 0;
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: $primary-color;
+      color: $white;
+      z-index: -1;
+      transition: all 0.3s;
+      max-height: 25rem;
+      overflow-y: auto;
+      margin-block-start: 1rem;
+
+      ul{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        padding: 2rem;
+        column-gap: 3rem;
+        row-gap: 2rem;
+
+        li{
+          list-style: none;
+        }
+      }
+    }
+
+    &:hover {
+      .cls-marquee-hover-content {
+        z-index: 100;
+        opacity: 1;
+      }
+    }
 
     .cls-marquee-content {
       display: flex;
@@ -421,7 +453,7 @@ header {
 
     .cls-marquee {
       font-weight: 600;
-      font-size: clamp(3rem ,7vw,9rem);
+      font-size: clamp(3rem, 7vw, 9rem);
       line-height: 1em;
       flex-shrink: 0;
       flex-basis: 100%;
@@ -470,7 +502,6 @@ header {
   /* SKILLS SECTION */
   /**************************/
   #skills {
-    
     h1 {
       margin-block-end: 3rem;
     }
@@ -525,7 +556,7 @@ header {
           flex: 0 0 28%;
           max-width: 28%;
           font-weight: 200;
-          font-size: clamp(2rem , 10vw ,6rem);
+          font-size: clamp(2rem, 10vw, 6rem);
           line-height: 30px;
           transition: 0.35s ease-out;
           min-height: 8rem;
@@ -636,9 +667,9 @@ header {
         .cls-footer-email {
           color: $primary-color-brt;
           // font-size: 1rem;
-          font-size: clamp( 1rem, 4vw ,4rem);
+          font-size: clamp(1rem, 4vw, 4rem);
           font-weight: 700;
-          
+
           a {
             text-decoration: none;
             letter-spacing: 0.5px;
@@ -656,7 +687,7 @@ header {
         font-size: 2rem;
       }
 
-      a{
+      a {
         text-decoration: none;
         color: $primary-color-brt;
       }
