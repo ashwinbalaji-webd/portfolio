@@ -179,7 +179,7 @@ header {
   grid-row: 2/3;
 }
 #container #hero {
-  height: 100lvh;
+  height: 100vh;
   position: relative;
   background-color: #2b4cc5;
   background-image: linear-gradient(135deg, transparent 45%, #162c7c 45%, #162c7c 55%, transparent 0);
