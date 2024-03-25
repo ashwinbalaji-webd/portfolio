@@ -45,9 +45,9 @@
         padding: 6rem 5rem;
       }
 
-      & > div{
+      & > div {
         h4 {
-            padding-block-end: 1rem;
+          padding-block-end: 1rem;
         }
       }
 
@@ -82,7 +82,7 @@
       }
 
       .cls-personal-details {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: 1fr;
         margin-block-start: 3rem;
         gap: 3rem;
       }
@@ -112,6 +112,20 @@
           flex-direction: column;
           gap: 2rem;
           padding-block-end: 0rem;
+          transition: all 0.3s;
+
+          &:hover {
+            transform: scale(1.07);
+            span {
+              color: $secondary-color;
+              font-weight: 600;
+              transform: translateX(0px);
+            }
+
+            p {
+              transform: translateX(0px);
+            }
+          }
 
           &::before {
             display: none;

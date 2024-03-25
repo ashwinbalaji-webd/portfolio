@@ -564,6 +564,10 @@ header {
 #container footer .cls-social-links > :first-child {
   font-size: 2rem;
 }
+#container footer .cls-social-links a {
+  text-decoration: none;
+  color: #2b4cc5;
+}
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
@@ -628,7 +632,7 @@ header {
     grid-template-columns: 1fr;
   }
   #container #services .cls-personal-details {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr;
     margin-block-start: 3rem;
     gap: 3rem;
   }
@@ -653,6 +657,18 @@ header {
     flex-direction: column;
     gap: 2rem;
     padding-block-end: 0rem;
+    transition: all 0.3s;
+  }
+  #container #skills ul li:hover {
+    transform: scale(1.07);
+  }
+  #container #skills ul li:hover span {
+    color: #FFF78A;
+    font-weight: 600;
+    transform: translateX(0px);
+  }
+  #container #skills ul li:hover p {
+    transform: translateX(0px);
   }
   #container #skills ul li::before {
     display: none;

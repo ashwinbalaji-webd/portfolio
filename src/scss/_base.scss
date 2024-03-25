@@ -655,6 +655,11 @@ header {
       & > :first-child {
         font-size: 2rem;
       }
+
+      a{
+        text-decoration: none;
+        color: $primary-color-brt;
+      }
     }
   }
 }
