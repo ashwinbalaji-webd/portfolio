@@ -13,7 +13,6 @@ html {
 }
 
 body {
-  width: 100vw;
   overflow-x: hidden;
   font-size: 1.7rem;
   line-height: 3rem;
@@ -47,6 +46,16 @@ header {
   border-bottom: 2px solid #162c7c;
 }
 
+.cls-h1 {
+  font-size: 2.4rem;
+  font-weight: 900;
+}
+
+.cls-h2 {
+  font-size: 1.8rem;
+  font-weight: 900;
+}
+
 .cls-aos-Y {
   opacity: 0;
   transform: translateY(20px);
@@ -68,7 +77,7 @@ header {
 }
 
 .cls-box {
-  padding-inline: 14rem;
+  padding-inline: clamp(2rem, 10vw, 14rem);
 }
 
 #container {
@@ -193,7 +202,7 @@ header {
   z-index: 5;
 }
 #container #hero nav .cls-mail {
-  font-size: 1.7rem;
+  font-size: clamp(1.2rem, 2vw, 1.7rem);
   color: #FFF78A;
   text-decoration: none;
 }
@@ -207,18 +216,18 @@ header {
   vertical-align: middle;
 }
 #container #hero .cls-hero-text-container {
-  line-height: clamp(1rem, 6vw, 7rem);
   display: flex;
   flex-direction: column;
   justify-content: center;
   gap: 5rem;
+  padding-inline-start: 3rem;
 }
 #container #hero .cls-hero-text-container > div {
   display: flex;
   flex-direction: column;
   justify-content: center;
   gap: 5rem;
-  margin-inline-start: 12rem;
+  margin-inline-start: clamp(0rem, 18vw, 10rem);
 }
 #container #hero .cls-hero-text-container .cls-hero-title {
   font-size: clamp(4rem, 10vw, 13rem);
@@ -233,14 +242,14 @@ header {
   color: #fff;
 }
 #container #hero .cls-hero-text-container .cls-hero-description {
-  font-size: 1.9rem;
+  font-size: clamp(1.2rem, 3vw, 1.9rem);
   line-height: 1.5;
   max-width: 40rem;
   font-weight: 500;
 }
 #container #hero .cls-hero-text-container > :last-child {
   margin: 0;
-  font-size: 8rem;
+  font-size: clamp(3rem, 6vw, 11rem);
   color: #fff;
   font-weight: 900;
   border-radius: 12px;
@@ -320,10 +329,6 @@ header {
   flex-direction: column;
   gap: 3rem;
 }
-#container #services > div .cls-about-box-1 h1 {
-  font-size: 2.4rem;
-  font-weight: 900;
-}
 #container #services > div .cls-about-box-2 {
   display: flex;
   flex-direction: column;
@@ -331,13 +336,12 @@ header {
   gap: 3rem;
 }
 #container #services > div .cls-about-box-2 .cls-about-subbox {
-  display: flex;
+  display: grid;
   align-items: center;
   border-bottom: 1px solid #e9e9e9;
   padding-block-end: 3rem;
-}
-#container #services > div .cls-about-box-2 .cls-about-subbox h4 {
-  min-width: 20rem;
+  gap: 2rem;
+  grid-template-columns: 1.4fr 3fr;
 }
 #container #services > div .cls-about-box-2 .cls-about-subbox > div {
   font-size: 1.6rem;
@@ -348,7 +352,8 @@ header {
   border-bottom: none;
 }
 #container #services .cls-personal-details {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
   align-items: center;
   justify-content: space-between;
   margin-block-start: 6rem;
@@ -368,7 +373,7 @@ header {
 }
 #container .cls-marquee-container .cls-marquee {
   font-weight: 600;
-  font-size: 9rem;
+  font-size: clamp(3rem, 7vw, 9rem);
   line-height: 1em;
   flex-shrink: 0;
   flex-basis: 100%;
@@ -477,14 +482,13 @@ header {
   margin-block-start: 6rem;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  row-gap: 3rem;
+  gap: 3rem;
   justify-content: space-between;
 }
 #container #skills .cls-progress-container > * {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  max-width: 42rem;
 }
 #container #skills .cls-progress-container > * h5 {
   font-weight: 400;
@@ -531,9 +535,10 @@ header {
   padding-block-end: 7rem;
 }
 #container footer .cls-contact > :first-child {
-  font-size: 7rem;
+  font-size: clamp(2rem, 8vw, 7rem);
   font-weight: 700;
   letter-spacing: -4px;
+  line-height: 1;
 }
 #container footer .cls-contact > :last-child {
   display: flex;
@@ -543,14 +548,14 @@ header {
 #container footer .cls-contact > :last-child svg {
   fill: #2b4cc5;
 }
-#container footer .cls-contact > :last-child div {
+#container footer .cls-contact > :last-child .cls-footer-email {
   color: #2b4cc5;
-  font-size: 4rem;
+  font-size: clamp(1rem, 4vw, 4rem);
   font-weight: 700;
-  letter-spacing: -4px;
 }
-#container footer .cls-contact > :last-child div a {
+#container footer .cls-contact > :last-child .cls-footer-email a {
   text-decoration: none;
+  letter-spacing: 0.5px;
 }
 #container footer .cls-social-links {
   display: flex;
@@ -560,4 +565,97 @@ header {
 }
 #container footer .cls-social-links > :first-child {
   font-size: 2rem;
-}/*# sourceMappingURL=main.css.map */
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  #container #hero .cls-hero-text-container {
+    line-height: 0.1;
+  }
+  #container #hero .cls-hero-text-container > div {
+    margin-inline-start: 0;
+  }
+  #container #hero .cls-hero-text-container > :last-child {
+    line-height: 1;
+  }
+  #container #hero nav {
+    right: 2rem;
+  }
+  #container #sidebar {
+    row-gap: 0;
+  }
+  #container #sidebar.cls-open {
+    width: 100%;
+    padding: 6rem 5rem;
+  }
+  #container #sidebar ul {
+    width: 30rem;
+  }
+  #container #sidebar ul li {
+    font-size: 6rem;
+  }
+  #container #services > div {
+    grid-template-columns: 1fr;
+  }
+  #container #services > div .cls-about-box-2 .cls-about-subbox {
+    grid-template-columns: 1fr;
+  }
+  #container #services .cls-personal-details {
+    grid-template-columns: repeat(2, 1fr);
+    margin-block-start: 3rem;
+    gap: 3rem;
+  }
+  #container #skills .cls-progress-container {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+  #container #skills .cls-progress-container > * {
+    flex-direction: column;
+    align-items: start;
+  }
+  #container #skills .cls-progress-container > * > div {
+    width: 100%;
+  }
+  #container footer .cls-contact {
+    padding-block-end: 3rem;
+  }
+  #container footer .cls-contact > :last-child {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  #container footer .cls-contact > :last-child .cls-footer-email {
+    font-size: 12px;
+  }
+}
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  #container #hero .cls-hero-text-container {
+    line-height: 0.4;
+  }
+  #container #services .cls-personal-details {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  #skills .cls-progress-container {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+  #skills .cls-progress-container > * {
+    flex-direction: column;
+    align-items: start;
+    row-gap: 1rem;
+  }
+  #skills .cls-progress-container > * > div {
+    width: 100%;
+  }
+}
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  #container #hero .cls-hero-text-container {
+    line-height: 0.6;
+  }
+  #container #services .cls-personal-details {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+/* Large devices (laptops/desktops, 992px and up) */
+/* Extra large devices (large laptops and desktops, 1200px and up) *//*# sourceMappingURL=main.css.map */

@@ -13,7 +13,7 @@ html {
 }
 
 body {
-  width: 100vw;
+  // width: 100vw;
   overflow-x: hidden;
   font-size: 1.7rem;
   line-height: 3rem;
@@ -46,6 +46,16 @@ header {
   border-bottom: 2px solid $primary-color;
 }
 
+.cls-h1 {
+  font-size: 2.4rem;
+  font-weight: 900;
+}
+
+.cls-h2 {
+  font-size: 1.8rem;
+  font-weight: 900;
+}
+
 .cls-aos-Y {
   opacity: 0;
   transform: translateY(20px);
@@ -69,7 +79,7 @@ header {
 }
 
 .cls-box {
-  padding-inline: 14rem;
+  padding-inline: clamp(2rem, 10vw, 14rem);
 }
 
 #container {
@@ -198,7 +208,7 @@ header {
       z-index: 5;
 
       .cls-mail {
-        font-size: 1.7rem;
+        font-size: clamp(1.2rem, 2vw, 1.7rem);
         color: $secondary-color;
         text-decoration: none;
       }
@@ -215,18 +225,19 @@ header {
     }
 
     .cls-hero-text-container {
-      line-height: clamp(1rem, 6vw, 7rem);
+      // line-height: 0.6;
       display: flex;
       flex-direction: column;
       justify-content: center;
       gap: 5rem;
+      padding-inline-start: 3rem;
 
       & > div {
         display: flex;
         flex-direction: column;
         justify-content: center;
         gap: 5rem;
-        margin-inline-start: 12rem;
+        margin-inline-start: clamp(0rem, 18vw, 10rem);
       }
 
       .cls-hero-title {
@@ -245,7 +256,8 @@ header {
       }
 
       .cls-hero-description {
-        font-size: 1.9rem;
+        // font-size: 1.9rem;
+        font-size: clamp(1.2rem, 3vw, 1.9rem);
         line-height: 1.5;
         max-width: 40rem;
         font-weight: 500;
@@ -253,12 +265,13 @@ header {
 
       & > :last-child {
         margin: 0;
-        font-size: 8rem;
+        font-size: clamp(3rem, 6vw, 11rem);
         color: $white;
         font-weight: 900;
         border-radius: 12px;
         color: $secondary-color;
         text-shadow: 2px 2px $grey-drk;
+        // line-height: 0.6;
       }
     }
     .cls-hero-img-container {
@@ -350,11 +363,6 @@ header {
         display: flex;
         flex-direction: column;
         gap: 3rem;
-
-        h1 {
-          font-size: 2.4rem;
-          font-weight: 900;
-        }
       }
 
       .cls-about-box-2 {
@@ -364,14 +372,13 @@ header {
         gap: 3rem;
 
         .cls-about-subbox {
-          display: flex;
+          display: grid;
           align-items: center;
           border-bottom: 1px solid $grey-lt;
           padding-block-end: 3rem;
+          gap: 2rem;
+          grid-template-columns: 1.4fr 3fr;
 
-          h4 {
-            min-width: 20rem;
-          }
           & > div {
             font-size: 1.6rem;
             line-height: 2;
@@ -386,7 +393,8 @@ header {
     }
 
     .cls-personal-details {
-      display: flex;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
       align-items: center;
       justify-content: space-between;
       margin-block-start: 6rem;
@@ -413,7 +421,7 @@ header {
 
     .cls-marquee {
       font-weight: 600;
-      font-size: 9rem;
+      font-size: clamp(3rem ,7vw,9rem);
       line-height: 1em;
       flex-shrink: 0;
       flex-basis: 100%;
@@ -544,14 +552,14 @@ header {
       margin-block-start: 6rem;
       display: grid;
       grid-template-columns: repeat(2, 1fr);
-      row-gap: 3rem;
+      gap: 3rem;
       justify-content: space-between;
 
       & > * {
         display: flex;
         align-items: center;
         justify-content: space-between;
-        max-width: 42rem;
+        // max-width: 42rem;
 
         h5 {
           font-weight: 400;
@@ -609,9 +617,10 @@ header {
       padding-block-end: 7rem;
 
       & > :first-child {
-        font-size: 7rem;
+        font-size: clamp(2rem, 8vw, 7rem);
         font-weight: 700;
         letter-spacing: -4px;
+        line-height: 1;
       }
 
       & > :last-child {
@@ -623,14 +632,15 @@ header {
           fill: $primary-color-brt;
         }
 
-        div {
+        .cls-footer-email {
           color: $primary-color-brt;
-          font-size: 4rem;
+          // font-size: 1rem;
+          font-size: clamp( 1rem, 4vw ,4rem);
           font-weight: 700;
-          letter-spacing: -4px;
-
+          
           a {
             text-decoration: none;
+            letter-spacing: 0.5px;
           }
         }
       }
