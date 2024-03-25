@@ -68,7 +68,6 @@ header {
 
 .cls-aos-X {
   opacity: 0;
-  transform: translateX(10rem);
   transition: opacity 1s ease-out, transform 0.5s ease-out;
 }
 .cls-aos-X.cls-translateX {
@@ -250,7 +249,6 @@ header {
 #container #hero .cls-hero-text-container > :last-child {
   margin: 0;
   font-size: clamp(3rem, 6vw, 11rem);
-  color: #fff;
   font-weight: 900;
   border-radius: 12px;
   color: #FFF78A;
@@ -462,7 +460,7 @@ header {
   flex: 0 0 28%;
   max-width: 28%;
   font-weight: 200;
-  font-size: 60px;
+  font-size: clamp(2rem, 10vw, 6rem);
   line-height: 30px;
   transition: 0.35s ease-out;
   min-height: 8rem;
@@ -569,30 +567,60 @@ header {
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
+  #container #hero {
+    flex-direction: column;
+  }
   #container #hero .cls-hero-text-container {
+    margin-block-start: -10rem;
     line-height: 0.1;
+    z-index: 5;
   }
   #container #hero .cls-hero-text-container > div {
     margin-inline-start: 0;
   }
   #container #hero .cls-hero-text-container > :last-child {
     line-height: 1;
+    font-size: 18px;
+  }
+  #container #hero .cls-hero-text-container .cls-hero-description {
+    color: #fff;
   }
   #container #hero nav {
     right: 2rem;
   }
+  #container #hero .cls-hero-img-container {
+    position: absolute;
+    bottom: 0;
+    right: -100px;
+  }
+  #container #hero .cls-hero-img-container img {
+    width: 60%;
+  }
   #container #sidebar {
-    row-gap: 0;
+    row-gap: 20px;
+    grid-template-columns: 1fr;
+    overflow-x: hidden;
   }
   #container #sidebar.cls-open {
     width: 100%;
     padding: 6rem 5rem;
   }
+  #container #sidebar > div h4 {
+    padding-block-end: 1rem;
+  }
   #container #sidebar ul {
-    width: 30rem;
+    width: 28rem;
   }
   #container #sidebar ul li {
-    font-size: 6rem;
+    font-size: 3rem;
+  }
+  #container #sidebar .cls-contact {
+    grid-column: 1/4;
+    grid-row: auto;
+  }
+  #container #sidebar .cls-connect {
+    grid-column: 1/4;
+    grid-row: auto;
   }
   #container #services > div {
     grid-template-columns: 1fr;
@@ -615,6 +643,34 @@ header {
   }
   #container #skills .cls-progress-container > * > div {
     width: 100%;
+  }
+  #container #skills ul {
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+  }
+  #container #skills ul li {
+    flex-direction: column;
+    gap: 2rem;
+    padding-block-end: 0rem;
+  }
+  #container #skills ul li::before {
+    display: none;
+  }
+  #container #skills ul li span {
+    flex: 0 0 100%;
+    font-size: 3rem;
+    padding-block-end: 10px;
+    min-height: -moz-fit-content;
+    min-height: fit-content;
+    line-height: 1;
+    border-bottom: 3px solid #fff;
+  }
+  #container #skills ul li p {
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding: 0;
   }
   #container footer .cls-contact {
     padding-block-end: 3rem;
