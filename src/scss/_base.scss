@@ -538,7 +538,6 @@ header {
             background-position: center;
             background-repeat: no-repeat;
             background-size: cover;
-            border-radius: 8px;
           }
         }
 
@@ -548,6 +547,10 @@ header {
           .cls-img-container {
             margin: 0 auto;
             transform: scale(0.95);
+
+            img {
+              border-radius: 8px;
+            }
           }
         }
 
@@ -774,7 +777,7 @@ header {
           color: $primary-color-brt;
           // font-size: 1rem;
           font-weight: 700;
-          
+
           a {
             font-size: clamp(1rem, 3vw, 4rem);
             text-decoration: none;
