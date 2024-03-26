@@ -84,3 +84,26 @@ function progressAnimationCallback(entries, observer) {
     }
   }
 }
+
+
+/* Scroll to Top functionality */
+let STTButton = document.getElementById("scrollToTop");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+    STTButton.style.opacity = "1";
+    STTButton.style.zIndex = "1000";
+
+  } else {
+    STTButton.style.opacity = "0";
+    STTButton.style.zIndex = "-1";
+  }
+}
+
+function scrollToTop() {
+  document.body.scrollTop = 0; // For Safari
+  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+}
