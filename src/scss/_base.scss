@@ -706,41 +706,72 @@ header {
           font-weight: 400;
         }
 
-        & > div {
+        .cls-progress {
           width: 50%;
           height: 10px;
           background-color: $primary-color-lt;
           position: relative;
-
-          &::before {
-            content: "";
+          
+          .cls-progress-bar {
+            transition: all 3s;
             position: absolute;
+            left: 0;
             height: 10px;
             background-color: $primary-color-brt;
-          }
-
-          &.cls-p-1::before {
-            width: calc(90%);
-          }
-          &.cls-p-2::before {
-            width: calc(75%);
-          }
-          &.cls-p-3::before {
-            width: calc(76%);
-          }
-          &.cls-p-4::before {
-            width: calc(75%);
-          }
-          &.cls-p-5::before {
-            width: calc(90%);
-          }
-          &.cls-p-6::before {
-            width: calc(65%);
           }
         }
       }
     }
     padding-block-end: 5rem;
+  }
+
+  /**************************/
+  /* BLOGS SECTION */
+  /**************************/
+  .cls-blogs-container {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    margin-block-end: 8rem;
+    .cls-blog-card {
+      padding: 4rem 2rem;
+      border-bottom: 1px solid $grey-lt;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      transition: all 0.3s;
+      text-decoration: none;
+
+      &:hover {
+        background-color: $primary-color-lt;
+        transform: scale(1.05);
+      }
+
+      h3 {
+        font-size: clamp(1.8rem, 1.5vw, 3rem);
+        color: $grey-drk;
+      }
+
+      & > div {
+        font-size: 1rem;
+        line-height: 1.5;
+        font-weight: 900;
+        display: flex;
+        flex-direction: column;
+
+        & > * {
+          white-space: nowrap;
+        }
+      }
+      .cls-date {
+        color: $grey-drk;
+      }
+
+      .cls-category {
+        text-transform: uppercase;
+        color: $primary-color-brt;
+      }
+    }
   }
 
   /**************************/

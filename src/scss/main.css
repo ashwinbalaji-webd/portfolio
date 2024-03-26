@@ -112,6 +112,9 @@ header {
   /* SKILLS SECTION */
   /**************************/
   /**************************/
+  /* BLOGS SECTION */
+  /**************************/
+  /**************************/
   /* FOOTER SECTION */
   /**************************/
 }
@@ -176,7 +179,7 @@ header {
 #container #sidebar > div h4 {
   font-size: 1.6rem;
   padding-block-end: 3rem;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid #999;
   color: #fff;
   font-weight: 400;
 }
@@ -617,35 +620,58 @@ header {
 #container #skills .cls-progress-container > * h5 {
   font-weight: 400;
 }
-#container #skills .cls-progress-container > * > div {
+#container #skills .cls-progress-container > * .cls-progress {
   width: 50%;
   height: 10px;
   background-color: #d5dbf3;
   position: relative;
 }
-#container #skills .cls-progress-container > * > div::before {
-  content: "";
+#container #skills .cls-progress-container > * .cls-progress .cls-progress-bar {
+  transition: all 3s;
   position: absolute;
+  left: 0;
   height: 10px;
   background-color: #2b4cc5;
 }
-#container #skills .cls-progress-container > * > div.cls-p-1::before {
-  width: 90%;
+#container .cls-blogs-container {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  margin-block-end: 8rem;
 }
-#container #skills .cls-progress-container > * > div.cls-p-2::before {
-  width: 75%;
+#container .cls-blogs-container .cls-blog-card {
+  padding: 4rem 2rem;
+  border-bottom: 1px solid #e9e9e9;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: all 0.3s;
+  text-decoration: none;
 }
-#container #skills .cls-progress-container > * > div.cls-p-3::before {
-  width: 76%;
+#container .cls-blogs-container .cls-blog-card:hover {
+  background-color: #d5dbf3;
+  transform: scale(1.05);
 }
-#container #skills .cls-progress-container > * > div.cls-p-4::before {
-  width: 75%;
+#container .cls-blogs-container .cls-blog-card h3 {
+  font-size: clamp(1.8rem, 1.5vw, 3rem);
+  color: #222;
 }
-#container #skills .cls-progress-container > * > div.cls-p-5::before {
-  width: 90%;
+#container .cls-blogs-container .cls-blog-card > div {
+  font-size: 1rem;
+  line-height: 1.5;
+  font-weight: 900;
+  display: flex;
+  flex-direction: column;
 }
-#container #skills .cls-progress-container > * > div.cls-p-6::before {
-  width: 65%;
+#container .cls-blogs-container .cls-blog-card > div > * {
+  white-space: nowrap;
+}
+#container .cls-blogs-container .cls-blog-card .cls-date {
+  color: #222;
+}
+#container .cls-blogs-container .cls-blog-card .cls-category {
+  text-transform: uppercase;
+  color: #2b4cc5;
 }
 #container footer {
   padding-block-start: 5rem;
@@ -774,7 +800,7 @@ header {
     flex-direction: column;
     align-items: start;
   }
-  #container #skills .cls-progress-container > * > div {
+  #container #skills .cls-progress-container > * .cls-progress {
     width: 100%;
   }
   #container #skills ul {
@@ -817,6 +843,23 @@ header {
     max-width: 100%;
     padding: 0;
   }
+  #container #blogs .cls-blogs-container .cls-blog-card {
+    flex-direction: column;
+    row-gap: 1rem;
+    align-items: start;
+  }
+  #container #blogs .cls-blogs-container .cls-blog-card > div {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+  }
+  #container #blogs .cls-blogs-container .cls-blog-card > div .cls-date {
+    order: 2;
+    color: #999;
+  }
+  #container #blogs .cls-blogs-container .cls-blog-card > div .cls-category {
+    order: 1;
+  }
   #container footer .cls-contact {
     padding-block-end: 3rem;
   }
@@ -851,7 +894,7 @@ header {
     align-items: start;
     row-gap: 1rem;
   }
-  #skills .cls-progress-container > * > div {
+  #skills .cls-progress-container > * .cls-progress {
     width: 100%;
   }
 }
@@ -874,6 +917,9 @@ header {
   #container #skills .cls-progress-container > * {
     flex-direction: row;
     justify-content: space-between;
+  }
+  #container #skills .cls-progress-container .cls-progress {
+    width: 50%;
   }
   #container #services .cls-personal-details {
     grid-template-columns: repeat(5, 1fr);
