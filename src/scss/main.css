@@ -32,6 +32,19 @@ body {
   background: #FFF78A;
 }
 
+/* Selection styling */
+::-moz-selection {
+  /* Code for Firefox */
+  color: #162c7c;
+  background: #FFF78A;
+}
+
+::selection {
+  color: #162c7c;
+  background: #FFF78A;
+  -webkit-text-stroke-color: #162c7c;
+}
+
 header {
   padding-block-start: 10rem;
   display: flex;
@@ -91,6 +104,9 @@ header {
   /**************************/
   /**************************/
   /* MARQUEEE SECTION */
+  /**************************/
+  /**************************/
+  /* PORTFOLIO SECTION */
   /**************************/
   /**************************/
   /* SKILLS SECTION */
@@ -220,6 +236,7 @@ header {
   justify-content: center;
   gap: 5rem;
   padding-inline-start: 3rem;
+  z-index: 10;
 }
 #container #hero .cls-hero-text-container > div {
   display: flex;
@@ -246,13 +263,15 @@ header {
   max-width: 40rem;
   font-weight: 500;
 }
-#container #hero .cls-hero-text-container > :last-child {
+#container #hero .cls-hero-text-container #role {
   margin: 0;
-  font-size: clamp(4.2rem, 6vw, 11rem);
+  font-size: clamp(4.2rem, 4vw, 11rem);
   font-weight: 900;
   border-radius: 12px;
   color: #FFF78A;
   text-shadow: 2px 2px #222;
+  line-height: 1;
+  transition: all 0.3s;
 }
 #container #hero .cls-hero-img-container {
   position: relative;
@@ -351,7 +370,7 @@ header {
 }
 #container #services .cls-personal-details {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(5, 1fr);
   align-items: center;
   justify-content: space-between;
   margin-block-start: 6rem;
@@ -439,6 +458,81 @@ header {
     transform: translateX(0) matrix(-1, 0, 0, 1, 0, 0);
   }
 }
+#container #portfolio .cls-portfolio-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3rem;
+  transition: all 0.3s;
+}
+#container #portfolio .cls-portfolio-container .cls-portfolio-card {
+  border-radius: 5px;
+  overflow: hidden;
+  background-color: #d5dbf3;
+  transition: all 0.3s;
+}
+#container #portfolio .cls-portfolio-container .cls-portfolio-card .cls-img-container {
+  height: 30rem;
+  transition: all 0.3s;
+}
+#container #portfolio .cls-portfolio-container .cls-portfolio-card .cls-img-container img {
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 8px;
+}
+#container #portfolio .cls-portfolio-container .cls-portfolio-card:hover {
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 10px 0px;
+}
+#container #portfolio .cls-portfolio-container .cls-portfolio-card:hover .cls-img-container {
+  margin: 0 auto;
+  transform: scale(0.95);
+}
+#container #portfolio .cls-portfolio-container .cls-portfolio-card .cls-description {
+  padding: 1rem 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+#container #portfolio .cls-portfolio-container .cls-portfolio-card .cls-description h3 {
+  font-size: 1.8rem;
+}
+#container #portfolio .cls-portfolio-container .cls-portfolio-card .cls-description p {
+  font-size: 1.4rem;
+  line-height: 1.5;
+  text-align: justify;
+}
+#container #portfolio .cls-portfolio-container .cls-portfolio-card .cls-description .cls-tags {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+#container #portfolio .cls-portfolio-container .cls-portfolio-card .cls-description .cls-tags span {
+  width: -moz-fit-content;
+  width: fit-content;
+  font-size: 1rem;
+  line-height: 1;
+  padding: 0.5rem 0.4rem 0.4rem 0.4rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  background-color: #FFF78A;
+}
+#container #portfolio .cls-portfolio-container .cls-portfolio-card .cls-description .cls-links {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 1rem;
+}
+#container #portfolio .cls-portfolio-container .cls-portfolio-card .cls-description .cls-links > div {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+#container #portfolio .cls-portfolio-container .cls-portfolio-card .cls-description .cls-links > div a {
+  color: #222;
+  font-weight: 500;
+}
 #container #skills {
   /**************************/
   /* PROGRESS SECTION */
@@ -510,13 +604,13 @@ header {
   margin-block-start: 6rem;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 3rem;
+  row-gap: 3rem;
   justify-content: space-between;
 }
 #container #skills .cls-progress-container > * {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  gap: 2rem;
 }
 #container #skills .cls-progress-container > * h5 {
   font-weight: 400;
@@ -578,10 +672,10 @@ header {
 }
 #container footer .cls-contact > :last-child .cls-footer-email {
   color: #2b4cc5;
-  font-size: clamp(1rem, 4vw, 4rem);
   font-weight: 700;
 }
 #container footer .cls-contact > :last-child .cls-footer-email a {
+  font-size: clamp(1rem, 3vw, 4rem);
   text-decoration: none;
   letter-spacing: 0.5px;
 }
@@ -612,8 +706,9 @@ header {
   #container #hero .cls-hero-text-container > div {
     margin-inline-start: 0;
   }
-  #container #hero .cls-hero-text-container > :last-child {
+  #container #hero .cls-hero-text-container #role {
     line-height: 1;
+    font-size: 3rem;
   }
   #container #hero .cls-hero-text-container .cls-hero-description {
     color: #fff;
@@ -665,6 +760,9 @@ header {
     grid-template-columns: 1fr;
     margin-block-start: 3rem;
     gap: 3rem;
+  }
+  #container #portfolio .cls-portfolio-container {
+    grid-template-columns: repeat(1, 1fr);
   }
   #container #skills .cls-progress-container {
     grid-template-columns: 1fr;
@@ -739,6 +837,9 @@ header {
   #container #services .cls-personal-details {
     grid-template-columns: repeat(2, 1fr);
   }
+  #container #portfolio .cls-portfolio-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
   #skills .cls-progress-container {
     grid-template-columns: 1fr;
     gap: 3rem;
@@ -758,8 +859,24 @@ header {
     line-height: 0.6;
   }
   #container #services .cls-personal-details {
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 /* Large devices (laptops/desktops, 992px and up) */
-/* Extra large devices (large laptops and desktops, 1200px and up) *//*# sourceMappingURL=main.css.map */
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  #container #skills .cls-progress-container {
+    -moz-column-gap: 10%;
+         column-gap: 10%;
+  }
+  #container #skills .cls-progress-container > * {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  #container #services .cls-personal-details {
+    grid-template-columns: repeat(5, 1fr);
+  }
+  #container #portfolio .cls-portfolio-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}/*# sourceMappingURL=main.css.map */

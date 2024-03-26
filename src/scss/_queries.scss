@@ -13,8 +13,9 @@
           margin-inline-start: 0;
         }
 
-        & > :last-child {
+        #role {
           line-height: 1;
+          font-size: 3rem;
         }
 
         .cls-hero-description {
@@ -85,6 +86,12 @@
         grid-template-columns: 1fr;
         margin-block-start: 3rem;
         gap: 3rem;
+      }
+    }
+
+    #portfolio {
+      .cls-portfolio-container {
+        grid-template-columns: repeat(1, 1fr);
       }
     }
 
@@ -185,8 +192,13 @@
         grid-template-columns: repeat(2, 1fr);
       }
     }
-  }
 
+    #portfolio {
+      .cls-portfolio-container {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+  }
   #skills {
     .cls-progress-container {
       grid-template-columns: 1fr;
@@ -215,14 +227,39 @@
 
     #services {
       .cls-personal-details {
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(3, 1fr);
       }
     }
   }
 }
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
+  #container {
+  }
 }
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
+  #container {
+    #skills {
+      .cls-progress-container {
+        column-gap: 10%;
+        & > * {
+          flex-direction: row;
+          justify-content: space-between;
+        }
+      }
+    }
+
+    #services {
+      .cls-personal-details {
+        grid-template-columns: repeat(5, 1fr);
+      }
+    }
+
+    #portfolio {
+      .cls-portfolio-container {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+  }
 }

@@ -33,10 +33,29 @@ function toggleSideBar() {
   const sidebar = document.getElementById("sidebar");
   sidebar.classList.toggle("cls-open");
 
-  if(sidebar.classList.contains('cls-open')){
-    sidebar.querySelector('ul').style.opacity = '1';
-    sidebar.querySelector('.cls-contact').style.opacity = '1';
-    sidebar.querySelector('.cls-connect').style.opacity = '1';
+  if (sidebar.classList.contains("cls-open")) {
+    sidebar.querySelector("ul").style.opacity = "1";
+    sidebar.querySelector(".cls-contact").style.opacity = "1";
+    sidebar.querySelector(".cls-connect").style.opacity = "1";
   }
-  
 }
+
+/* Dynamic role changer */
+const roleEl = document.getElementById("role");
+const roles = [
+  "Software Engineer",
+  "React Developer",
+  "Django Developer",
+  "API Developer",
+  "Web Developer"
+];
+
+let currentIndex = 0;
+
+setInterval(() => {
+  roleEl.innerHTML = roles[currentIndex];
+
+  currentIndex++;
+
+  if (currentIndex === roles.length) currentIndex = 0;
+}, 1000);

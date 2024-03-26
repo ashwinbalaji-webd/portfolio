@@ -31,6 +31,19 @@ body {
   background: $secondary-color;
 }
 
+/* Selection styling */
+::-moz-selection {
+  /* Code for Firefox */
+  color: $primary-color;
+  background: $secondary-color;
+}
+
+::selection {
+  color: $primary-color;
+  background: $secondary-color;
+  -webkit-text-stroke-color: $primary-color;
+}
+
 header {
   padding-block-start: 10rem;
   display: flex;
@@ -224,12 +237,12 @@ header {
     }
 
     .cls-hero-text-container {
-      // line-height: 0.6;
       display: flex;
       flex-direction: column;
       justify-content: center;
       gap: 5rem;
       padding-inline-start: 3rem;
+      z-index: 10;
 
       & > div {
         display: flex;
@@ -261,14 +274,15 @@ header {
         font-weight: 500;
       }
 
-      & > :last-child {
+      #role {
         margin: 0;
-        font-size: clamp(4.2rem, 6vw, 11rem);
+        font-size: clamp(4.2rem, 4vw, 11rem);
         font-weight: 900;
         border-radius: 12px;
         color: $secondary-color;
         text-shadow: 2px 2px $grey-drk;
-        // line-height: 0.6;
+        line-height: 1;
+        transition: all 0.3s;
       }
     }
     .cls-hero-img-container {
@@ -391,7 +405,7 @@ header {
 
     .cls-personal-details {
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
+      grid-template-columns: repeat(5, 1fr);
       align-items: center;
       justify-content: space-between;
       margin-block-start: 6rem;
@@ -412,7 +426,7 @@ header {
     flex-direction: column;
     gap: 2rem;
     position: relative;
-    
+
     .cls-marquee-hover-content {
       opacity: 0;
       position: absolute;
@@ -427,14 +441,14 @@ header {
       overflow-y: auto;
       margin-block-start: 1rem;
 
-      ul{
+      ul {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         padding: 2rem;
         column-gap: 3rem;
         row-gap: 2rem;
 
-        li{
+        li {
           list-style: none;
         }
       }
@@ -493,6 +507,99 @@ header {
 
         to {
           transform: translateX(0) matrix(-1, 0, 0, 1, 0, 0);
+        }
+      }
+    }
+  }
+
+  /**************************/
+  /* PORTFOLIO SECTION */
+  /**************************/
+  #portfolio {
+    .cls-portfolio-container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 3rem;
+      transition: all 0.3s;
+
+      .cls-portfolio-card {
+        border-radius: 5px;
+        overflow: hidden;
+        background-color: $primary-color-lt;
+        transition: all 0.3s;
+
+        .cls-img-container {
+          height: 30rem;
+          transition: all 0.3s;
+
+          img {
+            width: 100%;
+            height: 100%;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            border-radius: 8px;
+          }
+        }
+
+        &:hover {
+          box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 10px 0px;
+
+          .cls-img-container {
+            margin: 0 auto;
+            transform: scale(0.95);
+          }
+        }
+
+        .cls-description {
+          padding: 1rem 2rem;
+          display: flex;
+          flex-direction: column;
+          gap: 1rem;
+
+          h3 {
+            font-size: 1.8rem;
+          }
+
+          p {
+            font-size: 1.4rem;
+            line-height: 1.5;
+            text-align: justify;
+          }
+
+          .cls-tags {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+
+            span {
+              width: fit-content;
+              font-size: 1rem;
+              line-height: 1;
+              padding: 0.5rem 0.4rem 0.4rem 0.4rem;
+              text-transform: uppercase;
+              font-weight: 600;
+              background-color: $secondary-color;
+            }
+          }
+
+          .cls-links {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-size: 1rem;
+
+            & > div {
+              display: flex;
+              align-items: center;
+              gap: 0.5rem;
+
+              a {
+                color: $grey-drk;
+                font-weight: 500;
+              }
+            }
+          }
         }
       }
     }
@@ -584,14 +691,13 @@ header {
       margin-block-start: 6rem;
       display: grid;
       grid-template-columns: repeat(2, 1fr);
-      gap: 3rem;
+      row-gap: 3rem;
       justify-content: space-between;
 
       & > * {
         display: flex;
         align-items: center;
-        justify-content: space-between;
-        // max-width: 42rem;
+        gap: 2rem;
 
         h5 {
           font-weight: 400;
@@ -667,10 +773,10 @@ header {
         .cls-footer-email {
           color: $primary-color-brt;
           // font-size: 1rem;
-          font-size: clamp(1rem, 4vw, 4rem);
           font-weight: 700;
-
+          
           a {
+            font-size: clamp(1rem, 3vw, 4rem);
             text-decoration: none;
             letter-spacing: 0.5px;
           }
