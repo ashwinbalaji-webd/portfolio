@@ -5,7 +5,7 @@ const elements = [...document.querySelectorAll(".cls-aos-X, .cls-aos-Y")];
 let options = {
   root: null,
   rootMargin: "0px",
-  threshold: 0.3, // [1, 0.2, 0.5] // 50% intersection
+  threshold: 0.1, // [1, 0.2, 0.5] // 50% intersection
 };
 
 const observer = new IntersectionObserver(callback, options);
